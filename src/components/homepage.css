@@ -1,0 +1,33 @@
+.head-img{
+    height: 100%;
+    width: 100vw;
+}
+
+
+.head{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.heading{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    translate: transform(-50%,-50%);
+    -ms-transform: translate(-50%, -50%);
+}
+@media screen and (max-width:900px) {
+    .head-img{
+        height: 100vh;
+        width: 100vw;
+    }
+    .heading{
+        position: absolute;
+    top: 40%;
+    left: 30%;
+    padding-right: 90px;
+    translate: transform(-50%,-50%);
+    -ms-transform: translate(-50%, -50%);
+    }
+    
+}
