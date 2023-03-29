@@ -6,12 +6,13 @@ function Homepage() {
     const { Configuration, OpenAIApi } = require("openai");
 const [res,setRes]=useState("");
 const [loading,setLoading]=useState(false);
-
+console.log(process.env.REACT_APP_API_KEY)
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: `${process.env.REACT_APP_API_KEY}`,
 });
 const openai = new OpenAIApi(configuration);
 async function hello(){
+  setLoading(false);
     const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: `Write a recipe based on these ingredients ${data} and give only Instructions:`,
@@ -23,6 +24,7 @@ async function hello(){
       });
       console.log(response);  
       setRes(response.data.choices[0].text);
+      setLoading(true);
       
 }
 
@@ -51,17 +53,22 @@ arrow_drop_down_circle
         <div className='ing'>
 
         <textarea placeholder='Eg: 1)Egg' className='ingredients' onChange={HandleChange}></textarea>
-        <a href='#page3'><button className='ing-btn' onClick={handleClick}>RECIPE</button></a>
+        <a href='#go'><button className='ing-btn' onClick={handleClick}>RECIPE</button></a>
         </div>
      
       <img src='https://images.unsplash.com/photo-1503453776591-b4548af666a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNoZWYlMjBhbmltYXRlZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'  alt="chef" className='chefimg'/>
       </div>
     </div>
     <div id="page3">
-      <div>Here's your recipe</div>
+    {(!loading) && <div>Your recipe is being ready</div>}
+    {(loading) && <div>Here's your recipe</div>}
+      
       <div>
-        <textarea className='recipe' value={res}>{res}</textarea>
+      {(!loading) && <img alt='kms' className='load' src='https://img.freepik.com/premium-vector/smiling-chef-cartoon-character_8250-10.jpg'/>}
+        {(loading) && <textarea  className='recipe' value={res}>{res}</textarea>}
+        <p id='go'></p>
       </div>
+      <br></br>
     </div>
    </div>
   )

@@ -86,6 +86,7 @@ h1 {
   border-radius: 5px;
   border-color: aliceblue;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .ing-btn:hover{
@@ -159,17 +160,42 @@ h1 {
   }
 
   #page3{
-      margin-top: 200px;
+    padding-top: 100px;
       font-family: 'Poiret One', cursive;
       font-weight: 700;
       font-size: 10vw;
-      
       background-color: linear-gradient(rgb(177, 117, 44),white,rgb(177, 117, 44));
     }
+.load{
+  width: 20vw;
+  margin-top: 10px;
+  border-radius: 200px;
+  box-shadow: 4px 4px 2px grey;
+  border: solid  6px #0091EA;
+  animation: color-change 2s linear infinite; 
+}
+  div{
+    font-size: 5vw;
+  }
 
 
+@keyframes color-change {
+  0%,100%{
+    border-color:#ff1493;
+  }
 
-
+  25%{
+    border-color:#8b4513;
+  }
+  
+  50%{
+    border-color:#0091EA;
+  }
+  
+  75%{
+    border-color:#9400d3;
+  }
+}
 
 
 
@@ -202,6 +228,7 @@ h1 {
         padding-right: 2px;
     }
     #page1{
+      padding-top: 240px;
         font-size: x-large;
         animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     }
@@ -214,10 +241,11 @@ h1 {
       border-radius: 5px;
       border-color: aliceblue;
       font-weight: 700;
+      cursor: pointer;
     }
 
     #page3{
-      margin-top: 200px;
+      padding-top: 270px;
       font-family: 'Poiret One', cursive;
       font-weight: 700;
       font-size: 10vw;
@@ -232,5 +260,29 @@ h1 {
       margin-left: 15vw;
       box-shadow: 2px 2px 1px rgb(92, 89, 89);
   }
+  .load{
+    width: 40vw;
+    margin-top: 10px;
+    border-radius: 200px;
+    box-shadow: 4px 4px 2px grey;
+    border: solid  6px #0091EA;
+    animation: color-change 2s linear infinite; 
+  }
+  div{
+    font-size: 10vw;
+  }
+  #page3{
+    padding-top: 400px;
+ 
+   
+      font-family: 'Poiret One', cursive;
+      font-weight: 700;
+      font-size: 10vw;
+      background-color: linear-gradient(rgb(177, 117, 44),white,rgb(177, 117, 44));
+    }
+    #go{
+
+      padding-top: 200px;
+    }
     
 }
