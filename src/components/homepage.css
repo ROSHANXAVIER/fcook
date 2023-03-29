@@ -7,16 +7,177 @@
 .head{
     overflow-x: hidden;
     overflow-y: hidden;
+    
 }
 
 .heading{
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 35%;
     translate: transform(-50%,-50%);
     -ms-transform: translate(-50%, -50%);
+    box-shadow: 3px 3px 1px grey;
+   
 }
-@media screen and (max-width:900px) {
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+
+
+h1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 50px; 
+}
+
+.headbtn{
+    position: absolute;
+    margin-top: 50px;
+    top:60%;
+    left: 45%;
+    translate: transform(-60%,-50%);
+    height: 50px;
+    width: 100px;
+    background-color: rgb(188, 183, 183);
+    box-shadow: 3px 3px 1px grey;
+    border-color: aliceblue;
+    border-top: 0;
+    border-left: 0;
+    padding-right: 2px;
+    cursor: pointer;
+}
+.headbtn:hover{
+    box-shadow: 2px 2px 2px 1px grey;
+    border-color: aliceblue;
+    border-top: 0;
+    border-left: 0;
+}
+
+#page1{
+    width: 97%;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  text-shadow: 1px 1px 1px rgb(108, 101, 101);
+  margin-top: 200px;
+  margin-bottom: 50px;
+  font-size: 6vw;
+}
+.ing{
+  display: flex;
+  flex-direction: column;
+}
+
+.ing-btn{
+  width: 10vw;
+  margin-top: 20px;
+  margin-left: 10vw;
+  box-shadow: 2px 3px 2px rgb(58, 55, 55);
+  color: rgb(177, 117, 44);
+  border-radius: 5px;
+  border-color: aliceblue;
+  font-weight: 700;
+}
+
+.ing-btn:hover{
+  margin-top: 21px;
+  box-shadow: 3px 3px 2px rgb(58, 55, 55);
+}
+
+.ingredients{
+    display: inline-block;
+    height: 20vh;
+    width: 30vw;
+    float: left;
+    margin-left: 40px;
+    border-radius: 10px;
+    margin-top: 100px;
+    box-shadow: 2px 2px 2px grey;
+    border-color: rgb(194, 160, 119);
+    overflow: auto;
+    outline: none;
+    font-family: 'Poiret One', cursive;
+    font-weight: 900;
+    resize: none; /*remove the resize handle on the bottom right*/
+}
+.chefimg{
+    display: inline;
+    border-radius: 5px 20px 5px;
+    width: 40vw;
+    height:80vh;
+    margin-left: 15vw;
+    box-shadow: 2px 2px 1px rgb(92, 89, 89);
+}
+.sidebyside1{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+  body{
+    background-color: rgb(203, 201, 201);
+  }
+  .second-page{
+    background-color: rgb(203, 201, 201);
+  }
+
+  .recipe{
+    margin-top: 20px;
+    width: 50vw;
+    height:50vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-style: italic;
+    color: rgb(132, 8, 8);
+    background-color: rgb(247, 217, 217);
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 2px 2px 2px grey;
+    resize: none;
+  }
+
+  #page3{
+      margin-top: 200px;
+      font-family: 'Poiret One', cursive;
+      font-weight: 700;
+      font-size: 10vw;
+      
+      background-color: linear-gradient(rgb(177, 117, 44),white,rgb(177, 117, 44));
+    }
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width:900px) {
     .head-img{
         height: 100vh;
         width: 100vw;
@@ -24,10 +185,52 @@
     .heading{
         position: absolute;
     top: 40%;
-    left: 30%;
-    padding-right: 90px;
+    left: 20%;
+    margin-right: 90px;
     translate: transform(-50%,-50%);
     -ms-transform: translate(-50%, -50%);
+    
     }
+    .headbtn{
+        position: absolute;
+        margin-top: 50px;
+        top:60%;
+        left: 30%;
+        height: 50px;
+        width: 100px;
+        translate: transform(-60%,-50%);
+        padding-right: 2px;
+    }
+    #page1{
+        font-size: x-large;
+        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    }
+    .ing-btn{
+      width: 20vw;
+      margin-top: 20px;
+      margin-left: 10vw;
+      box-shadow: 2px 3px 2px rgb(58, 55, 55);
+      color: rgb(177, 117, 44);
+      border-radius: 5px;
+      border-color: aliceblue;
+      font-weight: 700;
+    }
+
+    #page3{
+      margin-top: 200px;
+      font-family: 'Poiret One', cursive;
+      font-weight: 700;
+      font-size: 10vw;
+
+      background-color: linear-gradient(rgb(177, 117, 44),white,rgb(177, 117, 44));
+    }
+    .chefimg{
+      display: inline;
+      border-radius: 5px 20px 5px;
+      width: 40vw;
+      height:40vh;
+      margin-left: 15vw;
+      box-shadow: 2px 2px 1px rgb(92, 89, 89);
+  }
     
 }
