@@ -6,7 +6,7 @@ function Homepage() {
     const { Configuration, OpenAIApi } = require("openai");
 const [res,setRes]=useState("");
 const [loading,setLoading]=useState(false);
-console.log(process.env.REACT_APP_API_KEY)
+
 const configuration = new Configuration({
   apiKey:process.env.REACT_APP_API_KEY,
 });
