@@ -8,7 +8,7 @@ const [res,setRes]=useState("");
 const [loading,setLoading]=useState(false);
 console.log(process.env.REACT_APP_API_KEY)
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 async function hello(){
@@ -60,7 +60,7 @@ arrow_drop_down_circle
       </div>
     </div>
     <div id="page3">
-    {(!loading) && <div>Your recipe is being ready</div>}
+    {(!loading) && <div>Your recipe is getting ready</div>}
     {(loading) && <div>Here's your recipe</div>}
       
       <div>
