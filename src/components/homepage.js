@@ -8,7 +8,7 @@ const [res,setRes]=useState("");
 const [loading,setLoading]=useState(false);
 console.log(process.env.REACT_APP_API_KEY)
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey:process.env.REACT_APP_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 async function hello(){
